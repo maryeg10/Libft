@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+/*#include <stddef.h>*/
 char	*ft_strchr(const char *str, int m)
 {
 	int	i;
