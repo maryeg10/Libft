@@ -6,14 +6,14 @@
 /*   By: magalean <magalean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 14:40:00 by magalean          #+#    #+#             */
-/*   Updated: 2024/09/11 18:46:36 by magalean         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:32:48 by magalean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*#include <stdio.h>*/
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{

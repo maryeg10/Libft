@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: magalean <magalean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:42:22 by magalean          #+#    #+#             */
-/*   Updated: 2024/09/24 19:14:41 by magalean         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:03:41 by magalean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		src_len++;
 	while (dest[i] != '\0')
 		i++;
-
 	j = 0;
 	if (size <= i)
 		return (size + src_len);
-	while(src[j] != '\0' && (i < size - 1))
+	while (src[j] != '\0' && (i < size - 1))
 	{
 		dest[i] = src[j];
 		{
@@ -39,10 +38,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		}
 	}
 	dest[i] = '\0';
-	return(i + j);
+	return (i + j);
 }
 
-int main() {
+/*int main() {
     char dest[20] = "Hello";  // Destino con espacio suficiente
     const char *src = " World!";
     size_t size = sizeof(dest); // Tamaño total de dest
@@ -53,7 +52,8 @@ int main() {
     // Mostrar el resultado
     printf("Resultado: %s\n", dest);
     printf("Longitud total esperada: %ld\n", result);
-    printf("Longitud de 'dest' después de concatenar: %ld\n", ft_strlcat(dest, src, size));
+    printf("Longitud de 'dest' después de concatenar: 
+	%ld\n", ft_strlcat(dest, src, size));
 
     return 0;
-}
+}*/

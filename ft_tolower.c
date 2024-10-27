@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: magalean <magalean@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/27 18:19:32 by magalean          #+#    #+#             */
+/*   Updated: 2024/10/27 19:44:18 by magalean         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char  ft_tolower(char mayus)
+char	ft_tolower(char mayus)
 {
-  int  i;
+	int	i;
 
-  i = 0;
-  if (mayus >= 'A' && mayus <= 'Z')
-  {
-    i = mayus + 32;
-    return (i);
-  }
-  return (mayus);
+	i = 0;
+	if (mayus >= 'A' && mayus <= 'Z')
+	{
+		i = mayus + 32;
+		return (i);
+	}
+	return (mayus);
 }
 
 /*#include <stdio.h>

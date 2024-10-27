@@ -1,40 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: magalean <magalean@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/27 18:14:52 by magalean          #+#    #+#             */
+/*   Updated: 2024/10/27 20:15:49 by magalean         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*#include <stdio.h>
 #include <unistd.h>*/
 
-void  *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-  size_t i;
-  unsigned char *dest_aux;
-  const  unsigned char *src_aux;
+	unsigned char		*aux;
+	unsigned char		*dst;
+	size_t				counter;
 
-  i = 0;
-  dest_aux = (unsigned char *)dest;
-  src_aux = (const  unsigned char *)src;
-
-  if (!dest && !src)
-    return (NULL);
-  if ((dest_aux < src_aux) || (dest_aux >= src_aux + n))
-  {
-    while (i < n)
-    {
-      dest_aux[i] = src_aux[i];
-      i++;
-    }
-  }
-  else
-  {
-    i = n;
-    while (i > 0)
-    {
-      dest_aux[i] = src_aux[i];
-        i--;
-    }
-  }
-  return (dest);
+	aux = (unsigned char *)src;
+	dst = (unsigned char *)dest;
+	counter = n;
+	if (aux < dst && dst < aux + n)
+	{
+		while (counter--)
+			dst[counter] = aux[counter];
+	}
+	else
+		ft_memcpy(dst, aux, counter);
+	return (dest);
 }
 
-int  main(void)
+/*int  main(void)
 {
   unsigned char src[] = "Hello World";
   unsigned char *dest;
@@ -44,4 +43,4 @@ int  main(void)
   //printf("%s\n", dest);//
   //printf("%s\n", dest);
   return (0);
-}
+}*/
