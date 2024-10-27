@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: magalean <magalean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/27 18:18:10 by magalean          #+#    #+#             */
-/*   Updated: 2024/10/27 19:57:02 by magalean         ###   ########.fr       */
+/*   Created: 2024/10/27 18:19:57 by magalean          #+#    #+#             */
+/*   Updated: 2024/10/27 19:56:11 by magalean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	char	*res;
+	size_t				i;
+	const unsigned char	*s1_aux;
+	const unsigned char	*s2_aux;
 
-	if (!s || !f)
-		return (NULL);
-	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!res)
-		return (NULL);
 	i = 0;
-	while (s[i])
+	s1_aux = (const unsigned char *)s1;
+	s2_aux = (const unsigned char *)s2;
+	if (n == 0)
 	{
-		res[i] = f(i, s[i]);
-		i++;
+		return (0);
 	}
-	res[i] = '\0';
-	return (res);
+	if (s1 && s2 && n > 0)
+	{
+		while (s1_aux[i] != s2_aux[i])
+		{
+			return (s1_aux[i] - s2_aux[i]);
+		}
+	}
+	return (0);
 }

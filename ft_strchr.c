@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: magalean <magalean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 18:31:44 by magalean          #+#    #+#             */
-/*   Updated: 2024/09/25 19:41:31 by magalean         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:06:14 by magalean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*#include <stddef.h>*/
-char	*ft_strchr(const char *str, int m)
+char	*ft_strchr(const	char *str, int m)
 {
-	int	i;
-	char *aux = (char *)str;
+	int		i;
+	char	*aux;
+
+	*aux = (char *)str;
 	i = 0;
 	while (aux[i])
 	{
@@ -27,7 +29,7 @@ char	*ft_strchr(const char *str, int m)
 	}
 	return (NULL);
 }
-#include <unistd.h>
+/*#include <unistd.h>
 int	 main(void)
 {
 	char *str="hola";
@@ -46,4 +48,4 @@ int	 main(void)
 	write(1,aux,1);
 
 	
-}
+}*/

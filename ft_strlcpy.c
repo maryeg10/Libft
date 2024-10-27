@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: magalean <magalean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 17:22:37 by magalean          #+#    #+#             */
-/*   Updated: 2024/09/24 16:31:18 by magalean         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:01:16 by magalean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 /*#include <stdio.h>
 #include <string.h>*/
 
-size_t ft_strlcpy(char *dest, const char *src, size_t size)
-{	
-	size_t i;
-	// size_kt l;
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
 
 	i = 0;
-	// l =k 0;
 	if (size > 0)
 	{
 		while ((src[i] != '\0') && (i < size -1))
@@ -30,10 +28,10 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size)
 		}
 		dest[i] = '\0';
 	}
-	return(i);
+	return (i);
 }
 
-int main ()
+/*int main ()
 {
 	char	x[] = "Prueba copy :)";
 	char dst[15];
@@ -43,4 +41,4 @@ int main ()
 	printf("result --> [%ld]",ft_strlcpy(dst, x, size));
 	printf("result --> [%s]",strlcpy(dst, x, size));
 	// printf("%s",dst);
-}
+}*/
